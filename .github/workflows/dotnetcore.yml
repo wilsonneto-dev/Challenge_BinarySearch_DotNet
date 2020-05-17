@@ -22,4 +22,4 @@ jobs:
     - name: Build
       run: dotnet build --configuration Release --no-restore ./AppConsole/AppConsole.csproj
     - name: Test
-      run: dotnet test ./AppConsole.Tests/ --no-restore --verbosity normal
+      run: dotnet test ./AppConsole.Tests/ --no-restore -v m
