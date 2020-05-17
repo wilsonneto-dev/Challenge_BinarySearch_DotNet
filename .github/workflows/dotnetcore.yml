@@ -24,7 +24,7 @@ jobs:
     - name: Build test
       run: dotnet build ./AppConsole.Tests/AppConsole.Tests.csproj
     - name: Test
-      run: dotnet test ./AppConsole.Tests/ --no-restore -v m
+      run: dotnet test ./AppConsole.Tests/ --no-restore -v m /p:CollectCoverage=true /p:CoverletOutputFormat=lcov
     - name: Coveralls
       uses: coverallsapp/github-action@master
       with:
