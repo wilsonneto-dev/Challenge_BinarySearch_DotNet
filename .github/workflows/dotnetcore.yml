@@ -22,6 +22,6 @@ jobs:
     - name: Build
       run: dotnet build --configuration Release --no-restore ./AppConsole/AppConsole.csproj
     - name: Build test
-      run: dotnet build .\AppConsole.Tests\AppConsole.Tests.csproj
+      run: dotnet build ./AppConsole.Tests/AppConsole.Tests.csproj
     - name: Test
       run: dotnet test ./AppConsole.Tests/ --no-restore -v m
