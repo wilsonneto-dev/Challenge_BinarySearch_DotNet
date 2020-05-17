@@ -18,8 +18,8 @@ jobs:
       with:
         dotnet-version: 3.1.101
     - name: Install dependencies
-      run: dotnet restore .\AppConsole\AppConsole.csproj
+      run: dotnet restore ./AppConsole/AppConsole.csproj
     - name: Build
-      run: dotnet build --configuration Release --no-restore .\AppConsole\AppConsole.csproj
+      run: dotnet build --configuration Release --no-restore ./AppConsole/AppConsole.csproj
     - name: Test
-      run: dotnet test .\AppConsole.Tests\ --no-restore --verbosity normal
+      run: dotnet test ./AppConsole.Tests/ --no-restore --verbosity normal
