@@ -33,29 +33,21 @@ namespace AppConsole
     {
         public static int Search(int targetValue, int[] array)
         {
-            int middleIndex = array.Length/2;
-            int arraySerchLength = array.Length/2;
+            int rightEdge = array.Length -1;
+            int leftEdge = 0;
 
             do {
-                Console.WriteLine("MiddleIndex: " + middleIndex + " / Length: " + arraySerchLength);
-
-                if(middleIndex >= array.Length)
-                    middleIndex = array.Length - 1;
-
+                int middleIndex = leftEdge + (rightEdge-leftEdge)/2;
+    
                 if(targetValue == array[middleIndex])
                     return middleIndex;
 
-                if(arraySerchLength == 1)
-                    break;
-
-                arraySerchLength = (int)Decimal.Ceiling((decimal)arraySerchLength/(decimal)2);
-
                 if(targetValue > array[middleIndex]) {
-                    middleIndex += arraySerchLength;
+                    leftEdge = middleIndex +1;
                 } else {
-                    middleIndex -= arraySerchLength;
+                    rightEdge = middleIndex -1;
                 }
-            } while(arraySerchLength > 0);
+            } while(leftEdge <= rightEdge);
             
             return -1;            
         }
