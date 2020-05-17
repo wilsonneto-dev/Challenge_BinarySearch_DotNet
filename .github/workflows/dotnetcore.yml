@@ -25,3 +25,7 @@ jobs:
       run: dotnet build ./AppConsole.Tests/AppConsole.Tests.csproj
     - name: Test
       run: dotnet test ./AppConsole.Tests/ --no-restore -v m
+    - name: Coveralls
+      uses: coverallsapp/github-action@master
+      with:
+        github-token: ${{ secrets.COVERALLS_TOKEN }}
