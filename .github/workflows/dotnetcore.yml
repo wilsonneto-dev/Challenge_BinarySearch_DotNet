@@ -24,8 +24,9 @@ jobs:
     - name: Build test
       run: dotnet build ./AppConsole.Tests/AppConsole.Tests.csproj
     - name: Test
-      run: dotnet test ./AppConsole.Tests/ --no-restore -v m /p:CollectCoverage=true /p:CoverletOutputFormat=lcov /p:CoverletOutput='./coverage/lcov.info'
+      run: dotnet test ./AppConsole.Tests/ --no-restore -v m /p:CollectCoverage=true /p:CoverletOutputFormat=lcov /p:CoverletOutput='./lcov.info'
     - name: Coveralls
       uses: coverallsapp/github-action@master
       with:
         github-token: ${{ secrets.COVERALLS_TOKEN }}
+        path-to-lcov: ./AppConsole.Tests/lcov.info  
