@@ -1,4 +1,5 @@
 # Challenge_BinarySearch_DotNet
+Just a testing
 
 Github Actions Tests: ![.NET Core](https://github.com/wilsonneto-dev/Challenge_BinarySearch_DotNet/workflows/.NET%20Core/badge.svg) [![Coverage Status](https://coveralls.io/repos/github/wilsonneto-dev/Challenge_BinarySearch_DotNet/badge.svg?branch=master)](https://coveralls.io/github/wilsonneto-dev/Challenge_BinarySearch_DotNet?branch=master)
 
