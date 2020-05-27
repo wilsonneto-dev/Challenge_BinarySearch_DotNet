@@ -33,7 +33,6 @@ namespace AppConsole
     {
         public static int Search(int targetValue, int[] array)
         {
-            return -1;
             int rightEdge = array.Length -1;
             int leftEdge = 0;
 
